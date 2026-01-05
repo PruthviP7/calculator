@@ -8,30 +8,76 @@ body {
   margin: 0;
   padding: 0;
 }
-
-.main-container {
-  background-color: rgb(255, 160, 97);
+/* Background */
+.wrapper {
   height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  background: #141414;
+  padding: 20px;
 }
 
-.calculator-container {
-  background-color: crimson;
-  border: 1px solid black;
-  border-radius: 5px;
+/* Calculator Container */
+.calculator {
+  width: 330px;
+  border-radius: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
-#button-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-}
-
-#button-container div {
-  background-color: #f1f1f1;
-  border: 1px solid black;
+/* Screen */
+.screen {
+  width: 95%;
+  height: 70px;
+  border: none;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 2rem;
   padding: 10px;
-  font-size: 30px;
-  text-align: center;
+  text-align: right;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+/* Keypad Grid */
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* Buttons */
+.btn {
+  height: 60px;
+  font-size: 1.3rem;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.12);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+/* Button Hover */
+.btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Button Press Animation */
+.btn:active {
+  transform: scale(0.93);
+}
+
+/* Equal Button Highlight */
+.equal {
+  background: #ff9500;
+  color: #fff;
+}
+
+.equal:hover {
+  background: #ffa733;
 }
